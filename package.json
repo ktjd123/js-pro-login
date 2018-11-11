@@ -6,6 +6,7 @@
     "start": "cd ./build/backend/ && yarn && node index.js",
     "ready": "cd ./backend && yarn upgrade && cd ../frontend && yarn upgrade",
     "clean": "rm -rf ./build",
+    "clean-git": "git remote remove origin",
     "clean-all": "rm -rf ./build && rm -rf backend/node_modules && rm -rf frontend/node_modules"
   },
   "author": "Sungmin Kim",
