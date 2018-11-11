@@ -282,11 +282,15 @@ module.exports = {
           {
             test: sassRegex,
             exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2 }).concat({
+            use: getStyleLoaders({
+              importLoaders: 2,
+              modules: true,
+              getLocalIdent: getCSSModuleLocalIdent,
+            }).concat({
               loader: require.resolve('sass-loader'),
               options: {
                 includePaths: [`${paths.appSrc}/styles`],
-                data: `@import 'utils';`,
+                data: `@import 'utils'; @import 'animations';`,
               },
             }),
           },
