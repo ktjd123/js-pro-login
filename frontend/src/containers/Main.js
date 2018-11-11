@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { toast } from 'react-toastify';
-import classNames from 'classnames/bind';
-import styles from './Main.scss';
-
-const cx = classNames.bind(styles);
+import { MainC } from '../components';
 
 class Main extends Component {
   componentDidMount() {
@@ -11,7 +8,7 @@ class Main extends Component {
   }
 
   render() {
-    return <div className={cx('red')}>this is the seed</div>;
+    return <MainC />;
   }
 }
 
