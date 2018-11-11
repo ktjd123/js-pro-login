@@ -371,7 +371,7 @@ module.exports = {
               loader: require.resolve("sass-loader"),
               options: {
                 includePaths: [`${paths.appSrc}/styles`],
-                data: `@import 'utils'; @import 'animations';`
+                data: `@import 'utils';`
               }
             }),
             // Don't consider CSS imports dead code even if the
