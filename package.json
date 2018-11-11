@@ -4,7 +4,9 @@
   "scripts": {
     "build": "rm -rf ./build && cd backend && yarn build && cd ../frontend && yarn build",
     "start": "cd ./build/backend/ && yarn && node index.js",
-    "clean": "rm -rf ./build"
+    "ready": "cd ./backend && yarn upgrade && cd ../frontend && yarn upgrade",
+    "clean": "rm -rf ./build",
+    "clean-all": "rm -rf ./build && rm -rf backend/node_modules && rm -rf frontend/node_modules"
   },
   "author": "Sungmin Kim",
   "license": "ISC"
