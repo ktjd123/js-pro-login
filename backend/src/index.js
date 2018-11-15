@@ -40,7 +40,7 @@ app.use(
     rolling: true,
     cookie: {
       maxAge: 365 * (24 * 60 * 60 * 1000),
-      domain: undefined
+      domain: process.env.NODE_ENV !== "development" ? undefined : undefined
     },
     store: new mongoStore({
       mongooseConnection: mongoose.connection,
