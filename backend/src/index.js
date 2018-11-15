@@ -33,6 +33,7 @@ const mongoStore = connectMongo(session);
 
 app.use(
   session({
+    key: "theSeed",
     secret: "fjso@jfjmx.3u0s.jfj2",
     resave: false,
     saveUninitialized: false,
@@ -54,12 +55,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "frontend", "index.html"));
 });
 
-
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   return res.status(500).json({ code: 0 });
 });
-
 
 app.listen(port, () => {
   console.log("\x1b[35m", "Api server is running at", port);
