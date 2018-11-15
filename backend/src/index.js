@@ -39,7 +39,8 @@ app.use(
     saveUninitialized: false,
     rolling: true,
     cookie: {
-      maxAge: 365 * (24 * 60 * 60 * 1000)
+      maxAge: 365 * (24 * 60 * 60 * 1000),
+      domain: undefined
     },
     store: new mongoStore({
       mongooseConnection: mongoose.connection,
