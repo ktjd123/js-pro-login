@@ -1,13 +1,66 @@
-@import '~include-media/dist/include-media';
-$breakpoints: ( small: 376px, medium: 768px, large: 1024px, huge: 1200px);
+@import "~include-media/dist/include-media";
+$breakpoints: (
+  small: 376px,
+  medium: 768px,
+  large: 1024px,
+  huge: 1200px
+);
+$background-color: #f1f3f5;
+$default-border-radius: 3px;
+$title: 1.3rem;
+$margin-top: 150px;
+$card-width: 600px;
+$card-width-padding: 640px;
 @mixin flex() {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @mixin flex-column() {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin button() {
+  width: 50px;
+  padding: 5px 15px;
+  background: black;
+  color: white;
+  border-radius: $default-border-radius;
+  font-size: 1rem;
+  @include flex-column();
+}
+
+@mixin cancel() {
+  width: 50px;
+  padding: 5px 15px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: $default-border-radius;
+  font-size: 1rem;
+  @include flex-column();
+}
+
+@mixin box($width) {
+  width: $width;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  border-radius: $default-border-radius;
+}
+
+@mixin background-image() {
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+@mixin input-border() {
+  border: none;
+  border-bottom: 1px solid black;
 }
