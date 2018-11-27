@@ -1,12 +1,16 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter, Route, Switch, Redirect,
+} from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { css } from 'glamor';
 
-import { Main } from './containers';
+import {
+  Login, Register, Change, All,
+} from './containers';
 import './styles/index.scss';
 
 export default () => (
@@ -20,7 +24,11 @@ export default () => (
         })}
       />
       <Switch>
-        <Route path="/" component={() => <Main />} />
+        <Route path="/login" component={() => <Login />} />
+        <Route path="/register" component={() => <Register />} />
+        <Route path="/change" component={() => <Change />} />
+        <Route path="/all" component={() => <All />} />
+        <Redirect from="/" to="/login" />
       </Switch>
     </div>
   </BrowserRouter>

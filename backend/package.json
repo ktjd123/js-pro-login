@@ -6,11 +6,13 @@
     "build": "babel src -d ../build/backend --presets es2015 && cp ./package.json ../build/backend"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
     "connect-mongo": "^2.0.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "joi": "^14.3.0",
     "mongoose": "^5.3.10",
     "mongoose-autopopulate": "^0.9.0",
     "morgan": "^1.9.1",
