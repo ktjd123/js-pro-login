@@ -8,6 +8,12 @@ export default class Register extends Component {
     id: '',
     pw: '',
     name: '',
+    studentNumber: '',
+    phoneNumber: '',
+    email: '',
+    else1: undefined,
+    else2: undefined,
+    else3: undefined,
     auth: false,
   };
 
@@ -29,7 +35,7 @@ export default class Register extends Component {
 
     register(this.state)
       .then((res) => {
-        toast.success('회원가입 완료');
+        toast.success('사용자 추가 완료');
       })
       .catch((err) => {
         const errMsg = ['다시 시도해주세요', '이미 존재하는 아이디입니다'];

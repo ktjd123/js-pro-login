@@ -1,0 +1,15 @@
+.table {
+  margin: 100px auto;
+  tr {
+    border: 1px solid #ddd;
+
+    th {
+      background: gray;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  }
+}

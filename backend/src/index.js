@@ -19,7 +19,7 @@ app.use(morgan("dev"));
 mongoose.Promise = global.Promise;
 mongoose.set("debug", true);
 mongoose.connect(
-  "mongodb://localhost:27017/theseed",
+  "mongodb://localhost:27017/JSPRO",
   { useNewUrlParser: true },
   (err, db) => {
     if (err) {
@@ -33,7 +33,7 @@ const mongoStore = connectMongo(session);
 
 app.use(
   session({
-    key: "theSeed",
+    key: "jsPro",
     secret: "fjso@jfjmx.3u0s.jfj2",
     resave: false,
     saveUninitialized: false,

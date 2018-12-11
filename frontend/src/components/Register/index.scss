@@ -1,0 +1,16 @@
+.register {
+  @include flex-column();
+
+  table {
+    tr {
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  }
+  button {
+    @include button();
+    width: 150px;
+  }
+}

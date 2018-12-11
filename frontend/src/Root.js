@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import { css } from 'glamor';
 
 import {
-  Login, Register, Change, All,
+  Login, Register, Change, ChangePassword, All,
 } from './containers';
 import './styles/index.scss';
 
@@ -26,6 +26,7 @@ export default () => (
       <Switch>
         <Route path="/login" component={() => <Login />} />
         <Route path="/register" component={() => <Register />} />
+        <Route path="/changepassword" component={() => <ChangePassword />} />
         <Route path="/change" component={() => <Change />} />
         <Route path="/all" component={() => <All />} />
         <Redirect from="/" to="/login" />
